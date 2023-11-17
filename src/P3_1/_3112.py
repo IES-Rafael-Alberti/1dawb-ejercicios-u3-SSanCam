@@ -18,5 +18,8 @@ for fila in range(3):
     for columna in range(2):
         matriz3[fila].append( matriz1[fila][columna] * matriz2[fila][columna] )
         #agrega el resultado de multiplicar las posiciones homonimas de las dos primeras matrices
-        
+
+
+
+entrada = input("lista numeros separados coma).split(", ")     
 """
