@@ -6,7 +6,7 @@ limite reintegro: 1-9
 TAMPOCO PUDEN METERSE NUMEROS REPETIDOS 
 
 """
-def pedir_numeros() -> list:
+def pedir_numeros(lista_numeros) -> list:
     
     try:
         lista_numeros = []
@@ -58,11 +58,8 @@ def loteria_primitiva(lista_numeros: list, reintegro: int) -> str:
 def main():
     
     try:
-        
-        lista_primitiva = pedir_numeros()
-        reintegro = pedir_reintegro()
-        
-        resultado = loteria_primitiva(lista_primitiva, reintegro)
+
+        resultado = loteria_primitiva(pedir_numeros(), pedir_reintegro())
         
         return resultado
         
