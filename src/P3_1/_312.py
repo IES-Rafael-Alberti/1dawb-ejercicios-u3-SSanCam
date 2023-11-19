@@ -2,14 +2,19 @@
 en una lista y la muestre por pantalla el mensaje Yo estudio <asignatura>, donde <asignatura> sobre cada una de las asignaturas de la lista."""
 
 def yo_estudio(asignatura: str):
-    print(f"Yo estudio: {asignatura}")    
+    return (f"Yo estudio: {asignatura}")    
+
 
 def main():
     
     asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
-
+    estudio = ""
+    
     for asignatura in asignaturas:
-        yo_estudio(asignatura)
-        
+        estudio = estudio + yo_estudio(asignatura) + '\n'
+    print(estudio)
+
+    
 if __name__=="__main__":
     main()
+    

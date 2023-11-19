@@ -10,6 +10,7 @@ def mostrar_notas(asignaturas: list, notas: list) -> str:
     return notas 
 
 def main(): 
+    
     notas = []
     asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
     

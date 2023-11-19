@@ -8,60 +8,55 @@ TAMPOCO PUDEN METERSE NUMEROS REPETIDOS
 
 def pedir_numeros():
     
+    try: 
+        
+        indice = 1
+        numeros = []
+        
+        for num in range(6):
+            numero = int(input(f'{indice}.- '))
+            
+            while (numero not in range(1,50) or (numero in numeros)):
+                print('El numero debe ser entre 1-49 y no repetirse.')
+                numero = int(input(f'{indice}.- '))
+        
+            numeros.append(numero)
+            indice += 1
+            
+        numeros.sort()
+        
+        return numeros
+        
+    except Exception:
+        
+        return print('ERROR - 404')
+        
+def pedir_reintegro():
+ 
     try:
-        num_list = 1
-        lista_numeros = []
-        
-        print("Introduce los numeros de tu boleto: ") 
-        numero = int(input(f"{num_list}.- "))
-        
-        while (len(lista_numeros) < 6):
-            
-            numero = int(input(f"Introduce datos validos\n{num_list}.-  "))
-            
-            if (numero in range(1,50)) and (numero not in lista_numeros):
-                
-                lista_numeros.append(numero)
-                numero = int(input(f"{num_list}.- "))
-                
-                num_list += 1
-            
-            else:
-                print("Introduce datos validos.")  
-                numero = int(input(f"{num_list}.- "))
-  
-        
-        lista_numeros.sort()
-        
-        return lista_numeros
-    
-    except ValueError:
-        print("Introduce datos validos.")
 
-
-    
-def pedir_reintegro() -> int:
-    
-    print("Introduce un numero entre 1-9 como reintegro: ")
-    reintegro = int(input())
-    
-    return reintegro
-    
+        reintegro = int(input('Reintegro -> '))
+        
+        while (reintegro <1 or reintegro > 9):
+            print('Tu reintegro debe ser un numero entre 1-9.')
+            reintegro = int(input('Reintegro -> '))
+        
+        return reintegro
+        
+    except Exception:
+        print('ERROR - 404')
 
 def main():
-    
-    try:
 
-        lista_numeros = pedir_numeros()
-        reintegro = pedir_reintegro()
-        
-        resultado = f"Tus numeros de boleto ordenados son: {lista_numeros} -R: {reintegro}"
-        
-        return print(resultado)
+    print('Introduce los 6 numeros de tu boleto: ')
+    numeros = pedir_numeros()
     
-    except ValueError :
-        print("Error.")  
+    print('Para tu reintegro, debes introducir un numero entre 1-9')
+    reintegro = pedir_reintegro()
     
+    resultado = print(f'Tu boleto ordenado es: {numeros} - R - {reintegro}')
     
+    return (resultado)
+
 if __name__=="__main__":
     main()

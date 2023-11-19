@@ -2,15 +2,15 @@
 def mostrar_lista(asignaturas) -> list:
     asignaturas = print("Matemáticas", "Física", "Química", "Historia", "Lengua")
     return asignaturas
-
-def mostrar_lista_(asignaturas) -> list:
-    (print(" - ".join(asignaturas)))
+    
+def mostrar_lista(asignaturas) -> list:
+    return(" - ".join(asignaturas))
 
 def main():
 
     asignaturas = ( "Matemáticas", "Física", "Química", "Historia", "Lengua")
-    mostrar_lista_(asignaturas)
-    return print()
+    resultado = mostrar_lista(asignaturas)
+    return resultado
     
 if __name__=="__main__":
     main()
