@@ -37,7 +37,7 @@ def pedir_reintegro():
 
         reintegro = int(input('Reintegro -> '))
         
-        while (reintegro <1 or reintegro > 9):
+        while (reintegro < 1 or reintegro > 9):
             print('Tu reintegro debe ser un numero entre 1-9.')
             reintegro = int(input('Reintegro -> '))
         
