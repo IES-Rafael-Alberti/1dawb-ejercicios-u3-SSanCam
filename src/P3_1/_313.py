@@ -5,11 +5,12 @@ def mostrar_notas(asignaturas: list, notas: list) -> str:
     for i in range(1,len(asignaturas)):
         asignatura = asignaturas[i]
         nota = notas[i]
-        print(f"En {asignatura} he sacado: {nota}")   
+        print(f"En {asignatura} has sacado: {nota}")   
             
     return notas 
 
 def main(): 
+    
     notas = []
     asignaturas = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
     
