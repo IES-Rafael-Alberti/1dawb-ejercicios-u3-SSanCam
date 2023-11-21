@@ -5,6 +5,7 @@ def clean_terminal():
     os.system("clr")
     
 def mostrar_lista(asignaturas) -> list:
+    
     asignaturas = print("Matemáticas", "Física", "Química", "Historia", "Lengua")
     return asignaturas
     
