@@ -1,5 +1,5 @@
 import pytest 
-from src.P3_0._303 import cuenta
+from src.P3_0_Cadenas._303 import cuenta
 
 @pytest.mark.parametrize(
     'palabra, letra, expected',

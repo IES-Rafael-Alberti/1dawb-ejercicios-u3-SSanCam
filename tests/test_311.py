@@ -1,5 +1,5 @@
 import pytest 
-from src.P3_1._311 import mostrar_lista
+from src.P3_0_Cadenas._311 import mostrar_lista
 
 @pytest.mark.parametrize(
     'asignaturas, expected',

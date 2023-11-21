@@ -1,5 +1,5 @@
 import pytest 
-from src.P3_0._304 import contar_letras
+from src.P3_0_Cadenas._304 import contar_letras
 
 @pytest.mark.parametrize(
     'palabra, letra, expected',
